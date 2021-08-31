@@ -7,7 +7,7 @@ RUN dotnet publish -c release -o /srv --no-restore
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0-alpine
 
-RUN dotnet new --install Steeltoe.NetCoreTool.Templates::0.1.1
+RUN dotnet new --install Steeltoe.NetCoreTool.Templates::0.2.3
 
 WORKDIR /srv
 COPY --from=build /srv .
